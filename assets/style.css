@@ -182,3 +182,24 @@ a { color: var(--mint); }
 .soon-thumb span { font: 700 15px var(--sans); letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.55); }
 .badge { display: inline-block; font-size: 11px; letter-spacing: .1em; padding: 2px 7px; border-radius: 4px; background: color-mix(in srgb, var(--red) 14%, transparent); color: var(--red); vertical-align: 1px; }
 .card .soon-note { font: 14px var(--sans); color: var(--muted); margin: 0; }
+
+.media { margin: 1em 0 1.6em; }
+.media .yt { position: relative; aspect-ratio: 16/9; background: #0a2e32; border-radius: 8px; overflow: hidden; }
+.media .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.media audio { width: 100%; }
+.media figcaption { font: 14px/1.4 var(--sans); color: var(--ink); margin-top: 8px; }
+.media figcaption span { color: var(--muted); }
+.slide-media { max-width: 820px; margin: 18px auto 0; }
+.slide-media .media { margin: 0; }
+
+.share-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font: 700 15px var(--sans); color: var(--mint-light); text-decoration: none; border: 1px solid rgba(127,214,187,.45); border-radius: 6px; padding: 8px 14px; }
+.share-link svg { width: 18px; height: 18px; fill: currentColor; }
+.share-link:hover { background: rgba(127,214,187,.1); }
+.share-page { background: #fff; color: #0e3b40; }
+.share { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px 16px; gap: 10px; }
+.share .kicker { color: #3f9e86; margin: 0; }
+.share h1 { font: 700 clamp(28px, 5vw, 56px)/1.1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; }
+.share .qr { width: min(52vh, 82vw); height: auto; display: block; }
+.share-url { font: 700 clamp(30px, 6.4vw, 92px)/1.1 var(--sans); margin: 8px 0 0; letter-spacing: .01em; word-break: break-all; }
+.share-hint { font: clamp(15px, 1.6vw, 22px) var(--sans); color: #5d6a66; margin: 0; }
+.share-back { margin-top: 14px; font: 14px var(--sans); color: #3f9e86; }
