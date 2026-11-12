@@ -176,3 +176,9 @@ a { color: var(--mint); }
 
 .org-text small { font-size: 12px; line-height: 1.4; opacity: .7; margin-top: 2px; }
 .org-top .org-text small { opacity: .62; }
+
+.card.soon { background: transparent; box-shadow: none; border-style: dashed; }
+.soon-thumb { aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; width: 100%; background: linear-gradient(160deg, var(--teal-2), #0a2e32); }
+.soon-thumb span { font: 700 15px var(--sans); letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.badge { display: inline-block; font-size: 11px; letter-spacing: .1em; padding: 2px 7px; border-radius: 4px; background: color-mix(in srgb, var(--red) 14%, transparent); color: var(--red); vertical-align: 1px; }
+.card .soon-note { font: 14px var(--sans); color: var(--muted); margin: 0; }
