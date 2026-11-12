@@ -57,7 +57,7 @@ a { color: var(--mint); }
   background: radial-gradient(1200px 400px at 80% 0%, #1f6a68 0%, transparent 60%), linear-gradient(180deg, var(--teal) 0%, #0a2e32 100%);
   color: #eef5f2;
 }
-.hero { padding: 64px 0 72px; }
+.hero { padding: 48px 0 76px; }
 .hero h1 { font-family: var(--sans); font-size: clamp(40px, 8vw, 76px); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; line-height: 1.05; }
 .hero h1::after { content: ""; display: block; width: 120px; height: 3px; background: var(--mint-light); margin-top: 20px; }
 .hero .sub { font-size: 20px; max-width: 640px; margin: 0 0 18px; opacity: .92; }
@@ -153,14 +153,24 @@ a { color: var(--mint); }
 .org-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .org-text strong { font-weight: 700; }
 .org-link:hover strong { text-decoration: underline; }
-.org-top { max-width: 680px; margin: 0 0 36px; }
-.org-top .org-link { color: #fff; font-size: 16px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; align-items: center; }
+.org-top { min-width: 0; }
+.org-top .org-link { flex-direction: column; text-align: center; gap: 16px; color: #fff; font-size: 15px; padding: 28px 24px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: rgba(255,255,255,.04); }
+.org-top .org-link:hover { background: rgba(255,255,255,.08); }
+.org-top .emblem { width: 140px; height: 140px; background: transparent; box-shadow: 0 0 0 1px rgba(255,255,255,.22); }
+.org-top .emblem img { width: 130px; height: 130px; }
+.org-top .org-text { gap: 6px; }
 .org-top .org-text span { opacity: .78; }
-.org-top .emblem { background: transparent; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .org-top .org-link { flex-direction: row; text-align: left; padding: 16px; font-size: 14px; }
+  .org-top .emblem { width: 72px; height: 72px; }
+  .org-top .emblem img { width: 66px; height: 66px; }
+}
 .foot p { margin: 0; }
 .foot .org { display: flex; justify-content: center; margin-top: 18px; }
 .foot .org-link { text-align: left; max-width: 560px; color: var(--muted); font-size: 14px; }
 .foot .org-link strong { color: var(--ink); }
 .foot .emblem { width: 56px; height: 56px; }
 .foot .emblem img { width: 52px; height: 52px; }
-@media (max-width: 520px) { .org-link .emblem { width: 60px; height: 60px; } .org-link .emblem img { width: 55px; height: 55px; } .org-top .org-link { font-size: 14px; } }
+
