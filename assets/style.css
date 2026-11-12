@@ -195,11 +195,11 @@ a { color: var(--mint); }
 .share-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font: 700 15px var(--sans); color: var(--mint-light); text-decoration: none; border: 1px solid rgba(127,214,187,.45); border-radius: 6px; padding: 8px 14px; }
 .share-link svg { width: 18px; height: 18px; fill: currentColor; }
 .share-link:hover { background: rgba(127,214,187,.1); }
-.share-page { background: #fff; color: #0e3b40; }
+.share-page { background: radial-gradient(1200px 600px at 75% 0%, #1f6a68 0%, transparent 60%), linear-gradient(180deg, #0e3b40 0%, #0a2e32 100%); background-color: #0a2e32; color: #fff; min-height: 100vh; }
 .share { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px 16px; gap: 10px; }
-.share .kicker { color: #3f9e86; margin: 0; }
-.share h1 { font: 700 clamp(28px, 5vw, 56px)/1.1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; }
-.share .qr { width: min(52vh, 82vw); height: auto; display: block; }
-.share-url { font: 700 clamp(30px, 6.4vw, 92px)/1.1 var(--sans); margin: 8px 0 0; letter-spacing: .01em; word-break: break-all; }
-.share-hint { font: clamp(15px, 1.6vw, 22px) var(--sans); color: #5d6a66; margin: 0; }
-.share-back { margin-top: 14px; font: 14px var(--sans); color: #3f9e86; }
+.share .kicker { color: #7fd6bb; margin: 0; }
+.share h1 { font: 700 clamp(28px, 5vw, 56px)/1.1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; color: #fff; }
+.share .qr { width: min(48vh, 78vw); height: auto; display: block; background: #fff; padding: 2vh; border-radius: 16px; box-sizing: content-box; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.share-url { font: 700 clamp(30px, 6.4vw, 92px)/1.1 var(--sans); margin: 14px 0 0; letter-spacing: .01em; word-break: break-all; color: #fff; }
+.share-hint { font: clamp(15px, 1.6vw, 22px) var(--sans); color: rgba(255,255,255,.72); margin: 0; }
+.share-back { margin-top: 14px; font: 14px var(--sans); color: #7fd6bb; }
