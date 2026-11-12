@@ -157,8 +157,8 @@ a { color: var(--mint); }
 .org-top { min-width: 0; }
 .org-top .org-link { flex-direction: column; text-align: center; gap: 16px; color: #fff; font-size: 15px; padding: 28px 24px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: rgba(255,255,255,.04); }
 .org-top .org-link:hover { background: rgba(255,255,255,.08); }
-.org-top .emblem { width: 140px; height: 140px; background: transparent; box-shadow: 0 0 0 1px rgba(255,255,255,.22); }
-.org-top .emblem img { width: 130px; height: 130px; }
+.org-top .emblem { width: 92px; height: 92px; background: transparent; box-shadow: 0 0 0 1px rgba(255,255,255,.22); }
+.org-top .emblem img { width: 86px; height: 86px; }
 .org-top .org-text { gap: 6px; }
 .org-top .org-text span { opacity: .78; }
 @media (max-width: 900px) {
@@ -174,3 +174,5 @@ a { color: var(--mint); }
 .foot .emblem { width: 56px; height: 56px; }
 .foot .emblem img { width: 52px; height: 52px; }
 
+.org-text small { font-size: 12px; line-height: 1.4; opacity: .7; margin-top: 2px; }
+.org-top .org-text small { opacity: .62; }
