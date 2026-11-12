@@ -40,6 +40,12 @@
       if (t && t.scrollIntoView && !document.fullscreenElement) t.scrollIntoView({ block: 'nearest' });
     }
     if (cur < count) new Image().src = src(cur + 1);
+    var tt = document.getElementById('to-text');
+    if (tt) {
+      var an = window.SLIDE_ANCHORS || [], best = null;
+      for (var j = 0; j < an.length; j++) if (an[j] <= cur) best = an[j];
+      tt.href = tt.href.split('#')[0] + (best ? '#slide-' + best : '');
+    }
     var box = document.getElementById('slide-media');
     if (box) {
       var m = (window.SLIDE_MEDIA || {})[cur];

@@ -203,3 +203,7 @@ a { color: var(--mint); }
 .share-url { font: 700 clamp(30px, 6.4vw, 92px)/1.1 var(--sans); margin: 14px 0 0; letter-spacing: .01em; word-break: break-all; color: #fff; }
 .share-hint { font: clamp(15px, 1.6vw, 22px) var(--sans); color: rgba(255,255,255,.72); margin: 0; }
 .share-back { margin-top: 14px; font: 14px var(--sans); color: #7fd6bb; }
+
+.slide-ref, .slide-anchor { scroll-margin-top: 24px; }
+.slide-anchor { display: block; height: 0; }
+.slide-ref:target { background: color-mix(in srgb, var(--red) 18%, transparent); color: var(--red); }
