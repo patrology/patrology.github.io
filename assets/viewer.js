@@ -46,6 +46,7 @@
       for (var j = 0; j < an.length; j++) if (an[j] <= cur) best = an[j];
       tt.href = tt.href.split('#')[0] + (best ? '#slide-' + best : '');
     }
+    placeEmbed();
     var box = document.getElementById('slide-media');
     if (box) {
       var m = (window.SLIDE_MEDIA || {})[cur];
@@ -53,6 +54,34 @@
       box.hidden = !m;
     }
   }
+
+  // Видео прямо в рамке на слайде
+  var emb = document.createElement('div');
+  emb.className = 'slide-embed';
+  emb.hidden = true;
+  frame.appendChild(emb);
+  emb.addEventListener('click', function (e) { e.stopPropagation(); });
+  var embFor = null;
+  function placeEmbed() {
+    var e = (window.SLIDE_EMBED || {})[cur];
+    if (!e) { emb.hidden = true; emb.innerHTML = ''; embFor = null; return; }
+    if (embFor !== cur) {
+      emb.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + e.yt + '?rel=0" title="' + e.title.replace(/"/g, '&quot;') +
+        '" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      embFor = cur;
+    }
+    var fw = frame.clientWidth, fh = frame.clientHeight, ar = 16 / 9;
+    var iw = fw, ih = fw / ar;
+    if (ih > fh) { ih = fh; iw = fh * ar; }
+    var ox = (fw - iw) / 2, oy = (fh - ih) / 2, r = e.r;
+    emb.style.left = (ox + r[0] * iw) + 'px';
+    emb.style.top = (oy + r[1] * ih) + 'px';
+    emb.style.width = (r[2] * iw) + 'px';
+    emb.style.height = (r[3] * ih) + 'px';
+    emb.hidden = false;
+  }
+  window.addEventListener('resize', placeEmbed);
+  document.addEventListener('fullscreenchange', function () { setTimeout(placeEmbed, 50); });
 
   prev.addEventListener('click', function () { go(cur - 1, true); });
   next.addEventListener('click', function () { go(cur + 1, true); });
