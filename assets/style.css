@@ -207,3 +207,55 @@ a { color: var(--mint); }
 .slide-ref, .slide-anchor { scroll-margin-top: 24px; }
 .slide-anchor { display: block; height: 0; }
 .slide-ref:target { background: color-mix(in srgb, var(--red) 18%, transparent); color: var(--red); }
+
+/* main navigation */
+.top { flex-wrap: wrap; }
+.main-nav { display: flex; gap: 4px; margin-right: auto; margin-left: 28px; }
+.main-nav a { color: #cfe3dd; text-decoration: none; font: 700 14px var(--sans); letter-spacing: .04em; padding: 6px 12px; border-radius: 6px; }
+.main-nav a:hover { background: rgba(255,255,255,.08); color: #fff; }
+.main-nav a.on { background: rgba(127,214,187,.16); color: #fff; box-shadow: inset 0 -2px 0 var(--mint-light); }
+@media (max-width: 700px) {
+  .main-nav { order: 3; width: 100%; margin: 6px 0 0; justify-content: space-between; }
+  .main-nav a { flex: 1; text-align: center; padding: 8px 4px; }
+  .author { display: none; }
+}
+
+/* library pages */
+.lec-hero.small { padding: 34px 0 30px; }
+.lib { padding-top: 28px; padding-bottom: 56px; max-width: 980px; }
+.lib-group { margin-bottom: 40px; }
+.lib-group > h2 { font: 700 15px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+.g-note { color: var(--muted); font-size: 16px; margin: 0 0 16px; }
+.t-card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; margin-bottom: 14px; scroll-margin-top: 16px; }
+.t-card:target { box-shadow: 0 0 0 2px var(--mint); }
+.t-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.t-head h3 { font: 700 21px/1.3 var(--sans); margin: 0; }
+.date { font: 700 13px var(--sans); color: var(--mint); white-space: nowrap; }
+.t-note { margin: 8px 0 0; font-size: 17px; }
+.t-sec { margin-top: 14px; }
+.t-sec h4 { font: 700 12px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+.t-sec ul, .lib-block ul { margin: 0; padding-left: 1.2em; font-size: 16px; line-height: 1.5; }
+.t-sec li, .lib-block li { margin-bottom: 4px; }
+.s-pub { color: var(--muted); }
+.t-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 14px; font: 14px var(--sans); }
+.meta-l { color: var(--muted); }
+.tag { display: inline-block; font: 700 12px var(--sans); text-decoration: none; padding: 4px 9px; border-radius: 4px; background: color-mix(in srgb, var(--mint) 14%, transparent); color: var(--mint); }
+.tag.ghost { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 400; }
+.tag:hover { filter: brightness(1.1); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+.chip { font: 700 13px var(--sans); border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 7px 13px; border-radius: 999px; cursor: pointer; }
+.chip.on { background: var(--teal); border-color: var(--teal); color: #fff; }
+.s-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.s-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 20px; padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 1.45; scroll-margin-top: 40px; }
+.s-item.hl { background: color-mix(in srgb, var(--mint) 12%, transparent); }
+.s-author { font-weight: 700; }
+.s-note { font-size: 15px; color: var(--muted); margin-top: 3px; }
+.s-tags { display: flex; flex-wrap: wrap; gap: 6px; align-content: flex-start; justify-content: flex-end; max-width: 300px; }
+.read { font: 700 13px var(--sans); color: var(--mint); text-decoration: none; padding: 4px 0; }
+.empty { color: var(--muted); }
+@media (max-width: 700px) { .s-item { grid-template-columns: 1fr; } .s-tags { justify-content: flex-start; max-width: none; } }
+.lib-block { margin-top: 3em; padding: 22px 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.lib-block h2 { font: 700 15px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; border: 0; padding: 0; }
+.lib-block h3 { font: 700 13px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; }
+.lib-more { font: 14px var(--sans); margin: 14px 0 0; }
+[hidden] { display: none !important; }
