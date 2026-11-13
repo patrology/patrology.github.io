@@ -350,3 +350,5 @@ a.tl-row:hover { background: color-mix(in srgb, var(--mint) 10%, transparent); }
 .slide-embed { position: absolute; z-index: 2; background: #000; }
 .slide-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
 .media.cap-only figcaption { margin-top: 0; }
+.part-tag { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: color-mix(in srgb, var(--red) 12%, transparent); color: var(--red); font: 600 11.5px/1.5 var(--sans); letter-spacing: .02em; text-transform: none; vertical-align: 1px; }
+.part-tag.on-dark { background: rgba(255,255,255,.12); color: #f3c9cc; }
