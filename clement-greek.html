@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1 Климент: греческий текст — Патрология</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.ico?v=2611131859" sizes="any">
-<link rel="icon" type="image/png" href="assets/favicon-32.png?v=2611131859">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2611131859">
-<link rel="stylesheet" href="assets/style.css?v=2611131859">
+<link rel="icon" href="favicon.ico?v=2611131907" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png?v=2611131907">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2611131907">
+<link rel="stylesheet" href="assets/style.css?v=2611131907">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <!-- Yandex.Metrika counter -->
 <script>
@@ -48,9 +48,9 @@ ym(114222383, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: t
   function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
   function parse(txt) { var ch = {}, cur = null; txt.split('\n').forEach(function (l) { l = l.trim(); if (!l) return;
       var m = l.match(/^## (\d+)$/); if (m) { cur = +m[1]; ch[cur] = []; return; } if (cur !== null) ch[cur].push(l); }); return ch; }
-  function para(t, l, i) {
+  function para(t, l, i, n) {
     var h = esc(l);
-    if (t.titles && i === 0) return '<p class="tr-title">' + h + '</p>';
+    if (t.titles && i === 0 && n > 0) return '<p class="tr-title">' + h + '</p>';
     if (t.greek) h = h.replace(/(^|\s)(\d{1,2}) (?=\S)/g, '$1<sup class="v">$2</sup>');
     return '<p>' + h + '</p>';
   }
@@ -61,7 +61,7 @@ ym(114222383, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: t
     for (var n = 0; n <= MAX; n++) {
       var cols = CFG.map(function (t, k) {
         var ps = data[k][n], body;
-        if (ps && ps.length) body = ps.map(function (l, i) { return para(t, l, i); }).join('');
+        if (ps && ps.length) body = ps.map(function (l, i) { return para(t, l, i, n); }).join('');
         else body = '<p class="tr-gap">' + (t.gaps[n] || (n === 57 ? '' : 'Текста этой главы нет.')) + '</p>';
         if (n === 57 && t.gaps[57] && ps) body += '<p class="tr-gap">' + t.gaps[57] + '</p>';
         return '<div class="tr-col' + (SINGLE ? ' single' : '') + '" data-col="' + t.id + '" lang="' + t.lang + '">' +
