@@ -259,3 +259,21 @@ a { color: var(--mint); }
 .lib-block h3 { font: 700 13px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; }
 .lib-more { font: 14px var(--sans); margin: 14px 0 0; }
 [hidden] { display: none !important; }
+
+/* section buttons */
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.hero-buttons .share-link { margin-top: 0; }
+.share-link.on { background: var(--mint-light); color: #0a2e32; border-color: var(--mint-light); }
+.toc li.grp a { color: var(--ink); font-weight: 700; margin-top: 8px; }
+.toc li.sub a { padding-left: 26px; }
+.toc .cnt { color: var(--muted); font-weight: 400; font-size: 12px; }
+.lib.lecture h2 { scroll-margin-top: 16px; }
+.lib .t-card { scroll-margin-top: 16px; }
+.lib .s-list { margin-bottom: 8px; }
+.s-sub { font: 700 12px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 20px 0 4px; }
+.lecture .g-note { font-size: 16px; }
+.lecture h3.s-sub { font: 700 12px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 22px 0 4px; }
+.lecture ul.s-list { padding-left: 0; list-style: none; }
+.lecture .s-list li { margin-bottom: 0; }
+.lecture .t-card h3 { margin: 0; font-size: 21px; }
+.lecture .t-sec h4 { margin: 0 0 6px; }
