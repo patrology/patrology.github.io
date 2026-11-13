@@ -341,3 +341,7 @@ a.tl-row:hover { background: color-mix(in srgb, var(--mint) 10%, transparent); }
 .tr-gap { font: italic 14px/1.5 var(--sans); color: var(--muted); }
 .tr-loading { color: var(--muted); font-family: var(--sans); }
 .ch-sel { font: 14px var(--sans); padding: 3px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
+.ep-nav { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+.ep-nav a { font: 500 13.5px var(--sans); padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.ep-nav a:hover { border-color: var(--mint); }
+.ep-nav a.on { background: var(--mint); border-color: var(--mint); color: var(--card); }
