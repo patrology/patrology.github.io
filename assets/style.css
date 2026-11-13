@@ -346,3 +346,4 @@ a.tl-row:hover { background: color-mix(in srgb, var(--mint) 10%, transparent); }
 .ep-nav a:hover { border-color: var(--mint); }
 .ep-nav a.on { background: var(--mint); border-color: var(--mint); color: var(--card); }
 .lat { font: 600 11px var(--sans); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; vertical-align: 2px; }
+.part-note { margin: 28px 0 0; padding: 14px 18px; border-left: 3px solid var(--mint); background: color-mix(in srgb, var(--mint) 8%, transparent); font: 15px/1.5 var(--sans); color: var(--ink); }
