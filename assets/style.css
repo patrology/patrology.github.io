@@ -304,3 +304,11 @@ a { color: var(--mint); }
 .tr-src h3 { font: 700 13px var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-top: 20px; }
 .tr-src li { margin-bottom: 6px; }
 @media (max-width: 800px) { .tr-grid { grid-template-columns: 1fr !important; gap: 14px; } .tr-ch { scroll-margin-top: 150px; } .tr-bar { position: static; } }
+.tr-main.narrow { max-width: 820px; }
+.tr-col.single { font-size: 18px; }
+.tr-cmp { margin-left: auto; font: 700 14px var(--sans); color: var(--mint); text-decoration: none; }
+.t-cta .btn.ghost { color: var(--mint); }
+.tr-note { font-size: 14px; opacity: .85; margin-top: 4px; }
+.tr-note a { color: var(--mint); }
+.t-note { font-size: 14px; color: var(--muted, #6b6b6b); margin: 0 0 6px; }
+.t-note a { color: inherit; }
