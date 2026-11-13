@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>«Пастырь» Ерма — Патрология</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.ico?v=2611131921" sizes="any">
-<link rel="icon" type="image/png" href="assets/favicon-32.png?v=2611131921">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2611131921">
-<link rel="stylesheet" href="assets/style.css?v=2611131921">
+<link rel="icon" href="favicon.ico?v=2611131923" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png?v=2611131923">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2611131923">
+<link rel="stylesheet" href="assets/style.css?v=2611131923">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <!-- Yandex.Metrika counter -->
 <script>
@@ -64,7 +64,7 @@ ym(114222383, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: t
   function para(t, l, i, k) {
     var h = esc(l), lat = /^\[лат\.\] /.test(l);
     if (lat) h = '<span class="lat">лат.</span> ' + h.slice(7);
-    if (t.titles && i === 0 && k !== '0') return '<p class="tr-title">' + h + '</p>';
+    if (t.titles && i === 0 && k !== '0' && (!/\./.test(k) || /\.1$/.test(k))) return '<p class="tr-title">' + h + '</p>';
     if (t.greek) h = h.replace(/(^|\s)(\d{1,2}) (?=\S)/g, '$1<sup class="v">$2</sup>');
     return '<p' + (lat ? ' lang="la"' : '') + '>' + h + '</p>';
   }
