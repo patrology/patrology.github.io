@@ -295,7 +295,7 @@ a { color: var(--mint); }
 .tr-grid { --n: 3; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 28px; }
 .tr-col { min-width: 0; font-size: 17px; line-height: 1.6; }
 .tr-col p { margin: 0 0 .7em; }
-.tr-col[lang="grc"] { font-family: "Gentium Plus", "Noto Serif", var(--serif); }
+.tr-col[lang="grc"] { font-family: "Noto Serif", "Gentium Plus", "Palatino Linotype", "Times New Roman", serif; font-size: 16px; }
 .tr-name { font: 700 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--mint); margin-bottom: 6px; }
 .v { font: 700 11px var(--sans); color: var(--muted); margin-right: 2px; }
 .tr-links { font: 13px var(--sans); color: var(--muted); margin: 6px 0 10px; }
