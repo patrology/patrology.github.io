@@ -352,3 +352,10 @@ a.tl-row:hover { background: color-mix(in srgb, var(--mint) 10%, transparent); }
 .media.cap-only figcaption { margin-top: 0; }
 .part-tag { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: color-mix(in srgb, var(--red) 12%, transparent); color: var(--red); font: 600 11.5px/1.5 var(--sans); letter-spacing: .02em; text-transform: none; vertical-align: 1px; }
 .part-tag.on-dark { background: rgba(255,255,255,.12); color: #f3c9cc; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn.ghost.on-dark { color: #fff; border-color: rgba(255,255,255,.45); background: transparent; }
+.btn.ghost.on-dark:hover { border-color: #fff; }
+.quiz-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: 36px 0 8px; padding: 20px 22px; border: 1px solid var(--line); border-left: 4px solid var(--mint); border-radius: 10px; background: var(--card); }
+.quiz-box > div { flex: 1 1 320px; min-width: 0; }
+.quiz-box h3 { margin: 0 0 6px; font: 700 18px var(--sans); }
+.quiz-box p { margin: 0; font: 15px/1.5 var(--sans); color: var(--muted); }
