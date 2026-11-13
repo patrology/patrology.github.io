@@ -336,3 +336,4 @@ a.tl-row:hover { background: color-mix(in srgb, var(--mint) 10%, transparent); }
 .tr-more { margin-top: 6px; font: 600 13px var(--sans); }
 .tr-more a { color: var(--mint); text-decoration: none; }
 .tr-more a:hover { text-decoration: underline; }
+.tl-note { display: block; margin-top: 2px; font: 400 13px/1.35 var(--sans); color: var(--muted); }
