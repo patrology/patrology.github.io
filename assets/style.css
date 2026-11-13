@@ -337,3 +337,7 @@ a.tl-row:hover { background: color-mix(in srgb, var(--mint) 10%, transparent); }
 .tr-more a { color: var(--mint); text-decoration: none; }
 .tr-more a:hover { text-decoration: underline; }
 .tl-note { display: block; margin-top: 2px; font: 400 13px/1.35 var(--sans); color: var(--muted); }
+.tr-title { font-style: italic; color: var(--muted); }
+.tr-gap { font: italic 14px/1.5 var(--sans); color: var(--muted); }
+.tr-loading { color: var(--muted); font-family: var(--sans); }
+.ch-sel { font: 14px var(--sans); padding: 3px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
