@@ -277,3 +277,30 @@ a { color: var(--mint); }
 .lecture .s-list li { margin-bottom: 0; }
 .lecture .t-card h3 { margin: 0; font-size: 21px; }
 .lecture .t-sec h4 { margin: 0 0 6px; }
+
+/* didache comparison */
+.t-cta { margin: 12px 0 0; }
+.tr-bar { position: sticky; top: 0; z-index: 5; background: var(--card); border-bottom: 1px solid var(--line); box-shadow: 0 4px 14px rgba(0,0,0,.05); }
+.tr-bar-in { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; padding-top: 10px; padding-bottom: 10px; font: 14px var(--sans); }
+.tr-lbl { color: var(--muted); font-weight: 700; margin-right: 6px; }
+.tr-toggles { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+.tr-toggle { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.tr-toggle input { accent-color: var(--teal); width: 16px; height: 16px; }
+.tr-chips { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.tr-chips a { min-width: 28px; text-align: center; padding: 3px 6px; border-radius: 4px; text-decoration: none; color: var(--ink); border: 1px solid var(--line); font-size: 13px; }
+.tr-chips a:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.tr-main { padding-top: 24px; padding-bottom: 48px; }
+.tr-ch { scroll-margin-top: 110px; padding: 18px 0 8px; border-bottom: 1px solid var(--line); }
+.tr-ch h2 { font: 700 15px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin: 0 0 12px; }
+.tr-grid { --n: 3; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 28px; }
+.tr-col { min-width: 0; font-size: 17px; line-height: 1.6; }
+.tr-col p { margin: 0 0 .7em; }
+.tr-col[lang="grc"] { font-family: "Gentium Plus", "Noto Serif", var(--serif); }
+.tr-name { font: 700 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--mint); margin-bottom: 6px; }
+.v { font: 700 11px var(--sans); color: var(--muted); margin-right: 2px; }
+.tr-links { font: 13px var(--sans); color: var(--muted); margin: 6px 0 10px; }
+.tr-src { margin-top: 32px; font-size: 16px; }
+.tr-src h2 { font: 700 15px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+.tr-src h3 { font: 700 13px var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-top: 20px; }
+.tr-src li { margin-bottom: 6px; }
+@media (max-width: 800px) { .tr-grid { grid-template-columns: 1fr !important; gap: 14px; } .tr-ch { scroll-margin-top: 150px; } .tr-bar { position: static; } }
