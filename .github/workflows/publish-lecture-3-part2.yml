@@ -2,7 +2,7 @@ name: Publish lecture 3 part 2
 on:
   schedule:
     # 19:30 Kyiv (UTC+2 in Nov) = 17:30 UTC, 26 Nov
-    - cron: '25 17 26 11 *'
+    - cron: '30 17 26 11 *'
   workflow_dispatch:
 permissions:
   contents: write
