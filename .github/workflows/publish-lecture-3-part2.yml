@@ -1,0 +1,34 @@
+name: Publish lecture 3 part 2
+on:
+  schedule:
+    # 19:30 Kyiv (UTC+2 in Nov) = 17:30 UTC, 26 Nov
+    - cron: '25 17 26 11 *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge lecture 3 part 2
+        run: |
+          set -euo pipefail
+          DATE_UTC="$(date -u +%F)"
+          echo "UTC date: $DATE_UTC event=$GITHUB_EVENT_NAME"
+          if [ "$DATE_UTC" != "2026-11-26" ] && [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            echo "Not 2026-11-26; skip."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin cursor/lecture-3-part2-1cd5
+          git merge --ff-only origin/cursor/lecture-3-part2-1cd5 -m "Publish lecture 3 part 2"
+          if [ -f .github/workflows/publish-lecture-3-part2.yml ]; then
+            git rm -f .github/workflows/publish-lecture-3-part2.yml
+            git commit -m "Remove one-shot publish workflow" || true
+          fi
+          git push origin HEAD:main
